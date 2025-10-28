@@ -116,7 +116,7 @@ lab:
                 exclude_managed_identity_credential=True
             ),
             endpoint=project_endpoint,
-        )
+   )
    ```
    
 1. コメント**Get a chat client**を探して、次のコードを追加し、モデルとチャットするためのクライアント オブジェクトを作成します。
@@ -136,7 +136,6 @@ lab:
 1. コードには、ユーザーが「quit」と入力するまでプロンプトを入力できるようにするループが含まれています。 ループ セクションで、コメント **Get a chat completion**を探して、次のコードを追加し、ユーザー入力をプロンプトに追加し、モデルから完了を取得し、プロンプトに完了を追加します (今後の反復のためにチャット履歴を保持します)。
 
     ```python
-   # Get a chat completion
    prompt.append({"role": "user", "content": input_text})
    response = openai_client.chat.completions.create(
             model=model_deployment,
@@ -145,7 +144,7 @@ lab:
    print(completion)
    prompt.append({"role": "assistant", "content": completion})
    ```
-
+   
 1. **CTRL + S** コマンドを使用して、変更をコード ファイルに保存します。
 
 ### Azure にサインインしてアプリを実行する
@@ -167,8 +166,8 @@ lab:
    python chat-app.py
    ```
 
-1. メッセージが表示されたら、`What is the fastest animal on Earth?` などの質問を入力し、生成 AI モデルからの応答を確認します。
-1. `Where can I see one?`や`Are they endangered?`など、フォローアップの質問をお試しください。 各反復の背景情報であるチャット履歴を使用して、会話を続行する必要があります。
+1. メッセージが表示されたら、`地球上で最も速く走る生物は何？` などの質問を入力し、生成 AI モデルからの応答を確認します。
+1. `どこでその生物を見ることができますか？`や`その生物は絶滅危惧種として指定されていますか？`など、フォローアップの質問をお試しください。 各反復の背景情報であるチャット履歴を使用して、会話を続行する必要があります。
 1. 終了したら、`quit` を入力してプログラムを終了します。
 
 > **ヒント**: レート制限を超えたためにアプリが使用不能になる場合。 数秒待ってから、やり直してください。 サブスクリプションで使用可能なクォータが不足している場合は、モデルが応答できない可能性があります。
