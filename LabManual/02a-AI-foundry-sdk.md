@@ -16,7 +16,7 @@ lab:
 - [Microsoft .NET 向け Azure AI プロジェクト](https://www.nuget.org/packages/Azure.AI.Projects)
 - [JavaScript 向け Azure AI プロジェクト](https://www.npmjs.com/package/@azure/ai-projects)
 
-この演習は約 **40** 分かかります。
+この演習は約 **35** 分かかります。
 
 ## モデルとチャットするクライアント アプリケーションを作成する
 

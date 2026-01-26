@@ -18,7 +18,7 @@ lab:
 - [Microsoft .NET 用の Azure OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 - [TypeScript 用の Azure OpenAI](https://www.npmjs.com/package/@azure/openai)
 
-この演習は約 **40** 分かかります。
+この演習は約 **35** 分かかります。
 
 ## プロジェクトにデータを追加する
 
